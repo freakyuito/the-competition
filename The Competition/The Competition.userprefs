@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ctrl/SeqCtrl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/InfoPanel.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/InfoPanel.cs" Line="24" Column="16" />
-      <File FileName="Assets/Scripts/UI/FocusPoint.cs" Line="10" Column="52" />
+      <File FileName="Assets/Scripts/UI/InfoPanel.cs" Line="26" Column="16" />
+      <File FileName="Assets/Scripts/UI/FocusPoint.cs" Line="1" Column="1" />
       <File FileName="Assets/DOTween/CustomPlugin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Ctrl/SeqCtrl.cs" Line="19" Column="13" />
+      <File FileName="Assets/Scripts/Ctrl/SeqCtrl.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
