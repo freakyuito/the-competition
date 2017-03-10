@@ -146,7 +146,7 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>/Users/uito/Documents/The Competition/Assets/DOTween/DOTween.dll</HintPath>
+ <HintPath>/Users/uito/the-competition/The Competition/Assets/DOTween/DOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

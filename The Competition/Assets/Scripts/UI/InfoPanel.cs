@@ -19,9 +19,9 @@ public class InfoPanel : MonoBehaviour {
 	public float expandWidth;
 
 	public void assign(List<string> tit, List<Sprite> spr, List<string> intr){
-		pics = tit;
-		intros = spr;
-		titles = intr;
+		titles = tit;
+		pics = spr;
+		intros = intr;
 		curTitle.text = titles [0];
 		curPic.sprite = pics [0];
 		curIntro.text = intros [0];
