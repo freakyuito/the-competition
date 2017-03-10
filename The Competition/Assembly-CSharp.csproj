@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DOTween\CustomPlugin.cs" />
+     <Compile Include="Assets\Scripts\Camera\RaycastDetect.cs" />
      <Compile Include="Assets\Scripts\Ctrl\SeqCtrl.cs" />
      <Compile Include="Assets\Scripts\UI\FocusPoint.cs" />
      <Compile Include="Assets\Scripts\UI\InfoPanel.cs" />

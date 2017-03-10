@@ -14,9 +14,14 @@ public class InfoPanel : MonoBehaviour {
 	Image curPic = null;
 	Text curTitle,curIntro = null;
 	RectTransform myRect = null;
+	bool isInDetailMode = false;
 	public Button prevBtn = null, nextBtn = null;
 	public Blur _blur;
 	public float expandWidth;
+
+	void Start(){
+		myRect = GetComponent<RectTransform> ();
+	}
 
 	public void assign(List<string> tit, List<Sprite> spr, List<string> intr){
 		titles = tit;
@@ -56,21 +61,31 @@ public class InfoPanel : MonoBehaviour {
 
 	public void show(){
 		_blur.enabled = true;
-		myRect.DOScaleY (1f, 0.5f).SetEase (Ease.OutCubic);
+		myRect.DOScaleY (1f, 0.25f).SetEase (Ease.OutCubic);
 	}
 	public void hide(){
 		_blur.enabled = false;
-		myRect.DOScaleY (0f, 0.5f).SetEase (Ease.OutCubic);
+		myRect.DOScaleY (0f, 0.25f).SetEase (Ease.OutCubic);
 	}
 
-	public void expand(){
-		myRect.DOMoveX (myRect.rect.x - expandWidth, 0.5f).SetEase (Ease.OutCubic).onComplete = delegate() {
-			myRect.DOSize(new Vector2(myRect.rect.width + expandWidth, myRect.rect.height),0.5f);
+	public void details(){
+		if (isInDetailMode) {
+			isInDetailMode = false;
+			shrink ();
+		} else {
+			isInDetailMode = true;
+			expand ();
+		}
+	}
+
+	private void expand(){
+		myRect.DOLocalMoveX (myRect.anchoredPosition.x - expandWidth/2, 0.25f).SetEase (Ease.OutCubic).onComplete = delegate() {
+			myRect.DOSize(new Vector2(myRect.rect.width + expandWidth, myRect.rect.height),0.25f);
 		};
 	}
-	public void shrink(){
-		myRect.DOSize(new Vector2(myRect.rect.width - expandWidth, myRect.rect.height),0.5f).onComplete = delegate() {
-			myRect.DOMoveX (myRect.rect.x + expandWidth, 0.5f).SetEase (Ease.OutCubic);
+	private void shrink(){
+		myRect.DOSize(new Vector2(myRect.rect.width - expandWidth, myRect.rect.height),0.25f).onComplete = delegate() {
+			myRect.DOLocalMoveX (myRect.anchoredPosition.x + expandWidth/2, 0.25f).SetEase (Ease.OutCubic);
 		};
 	}
 

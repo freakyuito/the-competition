@@ -23,7 +23,7 @@ public class SeqCtrl : MonoBehaviour {
 		_infoPanel.hide ();
 		transform.DOMove (_focusPoints [sort].transform.position, 0.75f).SetEase (Ease.OutCubic).onComplete = delegate() {
 			_infoPanel.assign(_focusPoints[sort].myTitle, _focusPoints[sort].myPic, _focusPoints[sort].myIntro);
-			_infoPanel.show();
+			_focusPoints[sort].show();
 		};
 	}
 
